@@ -1,9 +1,4 @@
-### springboot - redbook
-More development in this branch:
-1. defined two private methods in `PostServiceImpl`:
-- mapToEntity();
-- mapToDTO();
-
-2. developed RUD operations in Service and Controller layers;
-
-3. added a package "exception", and the `ResourceNotFoundException` class within it.
+### Spingboot - redbook
+On this branch:
+1. create "util" package, and develop `AppConstants` class within the package;
+2. replace the getAllPosts() method of the Service and Controller layers with `PostResponse getAllPosts()`.
