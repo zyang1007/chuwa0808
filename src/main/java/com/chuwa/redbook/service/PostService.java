@@ -1,6 +1,7 @@
 package com.chuwa.redbook.service;
 
 import com.chuwa.redbook.DTO.PostDto;
+import com.chuwa.redbook.DTO.PostResponse;
 
 import java.util.List;
 
@@ -10,9 +11,12 @@ public interface PostService {
 
     List<PostDto> getAllPosts();
 
-    PostDto getPostById(long id);
+    PostResponse getAllPosts(int pageNo, int pageSize, String sortBy, String sortDir);
 
-    PostDto updatePost(PostDto postDto, long id);
+    PostDto getPostById(Long id);
 
-    void deleteById(long id);
+    PostDto updatePost(PostDto postDto, Long id);
+
+    void deletePostById(Long id);
+
 }

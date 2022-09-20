@@ -6,12 +6,11 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+
 @Entity
-@Table(
-        name = "posts",
-        uniqueConstraints = {
-                @UniqueConstraint(columnNames = {"title"})
-        })
+@Table(name = "posts",
+        uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})}
+)
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -95,7 +94,7 @@ public class Post {
     @Override
     public String toString() {
         return "Post{" +
-                "Id=" + id +
+                "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", content='" + content + '\'' +
