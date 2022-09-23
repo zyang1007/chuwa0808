@@ -1,4 +1,7 @@
 ### springboot: redbook
+On this branch, add a "exception manager" `GlobalExceptionHandler` to handle different cases/exceptions; And, replace the mapToDto() and mapToEntity() methods with `ModelMapper` to do the data mapping work.
+
+
 1. Add new dependencies in pom.xml:
 ```
 <dependency>
