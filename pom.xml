@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.chuwa</groupId>
-    <artifactId>redbook</artifactId>
+    <artifactId>redbook_JPQL</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>redbook</name>
-    <description>redbook</description>
+    <name>redbook_JPQL</name>
+    <description>redbook_JPQL</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -26,12 +26,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

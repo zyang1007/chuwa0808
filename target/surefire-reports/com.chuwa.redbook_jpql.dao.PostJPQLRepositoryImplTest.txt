@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: com.chuwa.redbook_jpql.dao.PostJPQLRepositoryImplTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.007 s <<< FAILURE! - in com.chuwa.redbook_jpql.dao.PostJPQLRepositoryImplTest
+testSessionFactory  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.chuwa.redbook_jpql.dao.PostJPQLRepositoryImplTest.<init>(PostJPQLRepositoryImplTest.java:25)
+
+inserData  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.chuwa.redbook_jpql.dao.PostJPQLRepositoryImplTest.<init>(PostJPQLRepositoryImplTest.java:25)
+
+updatePost  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.chuwa.redbook_jpql.dao.PostJPQLRepositoryImplTest.<init>(PostJPQLRepositoryImplTest.java:25)
+
+getPost  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.chuwa.redbook_jpql.dao.PostJPQLRepositoryImplTest.<init>(PostJPQLRepositoryImplTest.java:25)
+
+getAllPostsWithJPQL  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.chuwa.redbook_jpql.dao.PostJPQLRepositoryImplTest.<init>(PostJPQLRepositoryImplTest.java:25)
+
+insertPost  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.chuwa.redbook_jpql.dao.PostJPQLRepositoryImplTest.<init>(PostJPQLRepositoryImplTest.java:25)
+
+deletePost  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.chuwa.redbook_jpql.dao.PostJPQLRepositoryImplTest.<init>(PostJPQLRepositoryImplTest.java:25)
+
