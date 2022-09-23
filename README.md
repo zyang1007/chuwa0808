@@ -1,17 +1,20 @@
 ### springboot: redbook
+Implement basic Spring security:
 
 1. Add new dependencies in pom.xml:
 ```
 <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-validation</artifactId>
+        <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
 ```
-2. Add new "configuration" to the `application.properties`:
-```
-# datasource
-spring.datasource.url=jdbc:mysql://localhost:3306/redbook?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
 
-# acutator, JMX
-management.endpoints.web.exposure.include=*
+2. Add new configuration to `application.properties`:
 ```
+# spring security
+spring.security.user.name=chuwa
+spring.security.user.password=chuwa
+spring.security.user.roles=ADMIN
+```
+
+3. 
