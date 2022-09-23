@@ -9,3 +9,5 @@ Learn to use JPQL & SQL to do operations on database:
 ####Testing JPQL query methods:
 Add testing code `PostJPQLRepositoryImplTest` under the **test** package.
 
+**TODO:**
+- all test cases failed, why?
