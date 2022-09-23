@@ -1,27 +1,16 @@
 ### springboot: redbook
-On this branch, add a "exception manager" `GlobalExceptionHandler` to handle different cases/exceptions; And, replace the mapToDto() and mapToEntity() methods with `ModelMapper` to do the data mapping work.
-
+On this branch, add Validation feature for Users' inputs:
 
 1. Add new dependencies in pom.xml:
 ```
 <dependency>
-    <groupId>org.modelmapper</groupId>
-    <artifactId>modelmapper</artifactId>
-    <version>2.4.5</version>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
 ```
 
-2. Add new package **config** and `CommonConfig` class;
+2. **DTO** layer: add annotations & constraints to the fields/attributes of `PostDto` and `CommentDto`;
 
-3. In service layer, use ModelMapper to replace mapToDto and mapToEntity:
-- `PostServiceImpl`;
-- `CommentServieImpl`;
+3. **Controller** layer: add `@Valid` annotation before every `@RequestBody` annotation - check if the input is valid(satisfy the constraints);
 
-4. Add more exceptions to **exception** package:
-- com.chuwa.redbook.payload.ErrorDetails;
-- com.chuwa.redbook.exception.GlobalExceptionHandler.
-
-
-
-#### Extra:
-Fixed the issue - comments are not automatically loaded when Get a Post (branch 04\_Comment).
+4. **Exception** layer: add new exception-handle-method into the `GlobalExceptionHandler` class. 
