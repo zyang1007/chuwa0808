@@ -1,13 +1,23 @@
 ### springboot: redbook
-Learn to use JPQL & SQL to do operations on database:
-1. add four JPQL and SQL query-methods to `PostRepository` interface;
-2. add `PostJPQLRepository` interface to the **dao** layer;
-3. add `PostJPQLRepositoryImpl` class to implements the interface;
-4. add corresponding methods(caller) to **service** and **controller** layer.
+1. Add new dependencies in pom.xml:
+```
+<dependency>
+    <groupId>org.modelmapper</groupId>
+    <artifactId>modelmapper</artifactId>
+    <version>2.4.5</version>
+</dependency>
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+```
 
+2. Add new package **config** and `CommonConfig` class;
 
-####Testing JPQL query methods:
-Add testing code `PostJPQLRepositoryImplTest` under the **test** package.
+3. In service layer, use ModelMapper to replace mapToDto and mapToEntity:
+- `PostServiceImpl`;
+- `CommentServieImpl`;
 
-**TODO:**
-- all test cases failed, why?  hibernate config file?
+4. Add more exceptions to **exception** package:
+- com.chuwa.redbook.payload.ErrorDetails;
+- com.chuwa.redbook.exception.GlobalExceptionHandler.
