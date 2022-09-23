@@ -9,10 +9,6 @@ On this branch, add a "exception manager" `GlobalExceptionHandler` to handle dif
     <artifactId>modelmapper</artifactId>
     <version>2.4.5</version>
 </dependency>
-<dependency>
-<groupId>org.springframework.boot</groupId>
-<artifactId>spring-boot-starter-validation</artifactId>
-</dependency>
 ```
 
 2. Add new package **config** and `CommonConfig` class;
