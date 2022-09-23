@@ -10,4 +10,4 @@ Learn to use JPQL & SQL to do operations on database:
 Add testing code `PostJPQLRepositoryImplTest` under the **test** package.
 
 **TODO:**
-- all test cases failed, why?
+- all test cases failed, why?  hibernate config file?
