@@ -1,7 +1,7 @@
 ### springboot: redbook
-- On this branch, add two features to the application: 1.Validation, 2.Exception handling.
+- On this branch, add Validation features to the application:
 
-**1. Validation** - check Request Body of controller layer, if not valid, returns customizied message.Steps:
+**Validation** - check Request Body of controller layer, if not valid, returns customizied message.Steps:
 
 - Add new dependencies in pom.xml:
 ```
