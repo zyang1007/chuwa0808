@@ -17,3 +17,5 @@ spring.datasource.url=jdbc:mysql://localhost:3306/redbook?allowPublicKeyRetrieva
 # acutator, JMX
 management.endpoints.web.exposure.include=*
 ```
+
+3. http://localhost:8080/actuator/health
