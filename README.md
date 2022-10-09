@@ -17,7 +17,8 @@
 
 
 
-**2. Exception/error handling**: add new exception-handle-method into the `GlobalExceptionHandler` class. 
+**2. Exception/error handling**: add new exception-handle-method into the `GlobalExceptionHandler` class.
+
 **Anotations:**
 - `@ExceptionHandler`: method Level; used to handle the specific exceptions and sending the custom responses to the client.
 
