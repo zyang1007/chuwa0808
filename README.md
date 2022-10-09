@@ -15,18 +15,4 @@
 
 - **Controller layer**: add `@Valid` annotation before every `@RequestBody` annotation - check if the input is valid(satisfy the constraints);
 
-
-
-
-**2. Exception/error handling**: add new exception-handle-method into the `GlobalExceptionHandler` class.
-
-**Anotations:**
-- `@ExceptionHandler`: method Level; used to handle the specific exceptions and sending the custom responses to the client.
-
-- `@ControllerAdvice`: class level; to handle the exceptions globally.
-
-**Steps:**
-1. Create ErrorDetails Class;
-2. Create GlobalExceptionHandler Class;
-3. Test using Postman Client.
-
+- add new exception-handle-method into the `GlobalExceptionHandler` class.
