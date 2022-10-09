@@ -16,3 +16,10 @@ On this branch, add Validation features to the application:
 - **Controller layer**: add `@Valid` annotation before every `@RequestBody` annotation - check if the input is valid(satisfy the constraints);
 
 - add new exception-handle-method into the `GlobalExceptionHandler` class.
+
+
+
+**Conclusion:**
+- apply rules/constraints on the Object's attributes in payload(DTO) layer;
+- check if Request Body is valid with @Valid in controller layer, throw exception if invalid;
+- (global)exception handler receives and handle exceptions.
