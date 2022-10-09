@@ -25,3 +25,14 @@ On this branch, add a "exception manager" `GlobalExceptionHandler` to handle dif
 
 #### Extra:
 Fixed the issue - comments are not automatically loaded when Get a Post (branch 04\_Comment).
+
+**Exception/error handling**:
+- `@ExceptionHandler`: method Level; used to handle the specific exceptions and sending the custom responses to the client.
+
+- `@ControllerAdvice`: class level; to handle the exceptions globally.
+
+**Steps:**
+1. Create ErrorDetails Class;
+2. Create GlobalExceptionHandler Class;
+3. Test using Postman Client.
+
