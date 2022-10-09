@@ -23,7 +23,7 @@ On this branch, add a "exception manager" `GlobalExceptionHandler` to handle dif
 
 
 
-#### Extra:
+### Extra:
 Fixed the issue - comments are not automatically loaded when Get a Post (branch 04\_Comment).
 
 **Exception/error handling**:
