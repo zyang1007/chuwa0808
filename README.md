@@ -18,7 +18,7 @@ spring.datasource.url=jdbc:mysql://localhost:3306/redbook?allowPublicKeyRetrieva
 management.endpoints.web.exposure.include=*
 ```
 
-3. Usage:
+3. **Usage examples:**
 - http://localhost:8080/actuator/health;
 - .../actuator/beans;
 - .../actuator/caches/...;
