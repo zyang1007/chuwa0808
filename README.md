@@ -1,5 +1,7 @@
 ### springboot: redbook
 
+#### Actuator - a tool to monitor the application.
+
 1. Add new dependencies in pom.xml:
 ```
 <dependency>
