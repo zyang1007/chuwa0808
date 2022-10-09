@@ -12,3 +12,9 @@
  class="com.chuwa.springbasic.components.impl.DataNu
 cleusChuwaNoComponent"></bean>
 ```
+
+#### Dependency Injection - tell Spring to inject the bean for this variable.
+**Annotations: **
+- `@Autowird` - By Type > By Name;
+- `@Resource` - By Name > By Type;
+- `@Inject`
