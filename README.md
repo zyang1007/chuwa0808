@@ -6,7 +6,7 @@ Learn to use JPQL & SQL to do operations on database:
 4. add corresponding methods(caller) to **service** and **controller** layer.
 
 
-####Testing JPQL query methods:
+#### Testing JPQL query methods:
 Add testing code `PostJPQLRepositoryImplTest` under the **test** package.
 
 **TODO:**
