@@ -1,4 +1,7 @@
 ### springboot: redbook
+
+**Validation** - check Request Body in controller layer, if not valid, returns customizied message.
+
 On this branch, add Validation feature for Users' inputs:
 
 1. Add new dependencies in pom.xml:
