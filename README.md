@@ -1,8 +1,7 @@
 ### springboot: redbook
+- On this branch, add two features to the application: 1.Validation, 2.Exception handling.
 
-**Validation** - check Request Body of controller layer, if not valid, returns customizied message.
-
-On this branch, add Validation feature for Users' inputs:
+**1. Validation** - check Request Body of controller layer, if not valid, returns customizied message.Steps:
 
 1. Add new dependencies in pom.xml:
 ```
@@ -16,14 +15,15 @@ On this branch, add Validation feature for Users' inputs:
 
 3. **Controller layer**: add `@Valid` annotation before every `@RequestBody` annotation - check if the input is valid(satisfy the constraints);
 
-4. **Exception layer**(error handling): add new exception-handle-method into the `GlobalExceptionHandler` class. 
 
-
+**2. Exception/error handling**: add new exception-handle-method into the `GlobalExceptionHandler` class. 
 **Anotations:**
-`@ExceptionHandler`:
-- Method Level;
-- used to handle the specific exceptions and sending the custom responses to the client.
+`@ExceptionHandler`: method Level; used to handle the specific exceptions and sending the custom responses to the client.
 
-`@ControllerAdvice`:
-- Class level;
-- to handle the exceptions globally.
+`@ControllerAdvice`: class level; to handle the exceptions globally.
+
+**Steps:**
+1. Create ErrorDetails Class;
+2. Create GlobalExceptionHandler Class;
+3. Test using Postman Client.
+
