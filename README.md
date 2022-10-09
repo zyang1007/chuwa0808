@@ -17,6 +17,7 @@
 
 
 
+
 **2. Exception/error handling**: add new exception-handle-method into the `GlobalExceptionHandler` class.
 
 **Anotations:**
