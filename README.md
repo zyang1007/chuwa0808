@@ -1,5 +1,5 @@
 ### springboot: redbook
-- On this branch, add Validation features to the application:
+On this branch, add Validation features to the application:
 
 **Validation** - check Request Body of controller layer, if not valid, returns customizied message.Steps:
 
