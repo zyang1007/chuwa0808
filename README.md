@@ -3,7 +3,7 @@
 
 **1. Validation** - check Request Body of controller layer, if not valid, returns customizied message.Steps:
 
-1. Add new dependencies in pom.xml:
+- Add new dependencies in pom.xml:
 ```
 <dependency>
 <groupId>org.springframework.boot</groupId>
@@ -11,16 +11,17 @@
 </dependency>
 ```
 
-2. **DTO layer**: add annotations & constraints to the fields/attributes of `PostDto` and `CommentDto`;
+- **DTO layer**: add annotations & constraints to the fields/attributes of `PostDto` and `CommentDto`;
 
-3. **Controller layer**: add `@Valid` annotation before every `@RequestBody` annotation - check if the input is valid(satisfy the constraints);
+- **Controller layer**: add `@Valid` annotation before every `@RequestBody` annotation - check if the input is valid(satisfy the constraints);
+
 
 
 **2. Exception/error handling**: add new exception-handle-method into the `GlobalExceptionHandler` class. 
 **Anotations:**
-`@ExceptionHandler`: method Level; used to handle the specific exceptions and sending the custom responses to the client.
+- `@ExceptionHandler`: method Level; used to handle the specific exceptions and sending the custom responses to the client.
 
-`@ControllerAdvice`: class level; to handle the exceptions globally.
+- `@ControllerAdvice`: class level; to handle the exceptions globally.
 
 **Steps:**
 1. Create ErrorDetails Class;
