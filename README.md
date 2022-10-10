@@ -1,20 +1,11 @@
 ### springboot: redbook
-Implement basic Spring security:
+Implement Spring security - in memory.
 
-1. Add new dependencies in pom.xml:
-```
-<dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-security</artifactId>
-</dependency>
-```
+1. Comment out the defined role in `application.properities`;
+2. add spring security properties into `config` and `controller` layers.
 
-2. Add new configuration to `application.properties`:
-```
-# spring security
-spring.security.user.name=chuwa
-spring.security.user.password=chuwa
-spring.security.user.roles=ADMIN
-```
 
-3. 
+#### Note:
+- user "chuwa" has role USER; user "admin" has role ADMIN;
+- so admin can call the api, chuwa can not.
+
