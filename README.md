@@ -1,7 +1,7 @@
 ### springboot: redbook
 Implement basic Spring security:
 
-#### 1. Add new dependencies in pom.xml:**
+#### 1. Add new dependencies in pom.xml:
 ```
 <dependency>
         <groupId>org.springframework.boot</groupId>
