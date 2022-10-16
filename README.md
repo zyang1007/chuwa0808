@@ -1,19 +1,25 @@
 ### springboot: redbook
-Implement Spring security - in memory.
+Implement Spring security - storing user info in database.
 
-1. Comment out the defined role in `application.properities`;
-2. Add spring security properties into `config` and `controller` layers.
-- add `SecurityInmemoryConfig` class in `config` layer, and creates two in-memory roles with the class method;
-- add "security policy" to the getAllPosts() mehtod of controller class, e.g.: 
-```
-@PreAuthorize("hasRole('ADMIN')")
-@GetMapping
-    public PostResponse getAllPosts(){
-	...
-    }
-```
+1. Disable the user-role configred in `application.properties`;
 
-#### Note:
-- user "chuwa" has role USER; user "admin" has role ADMIN;
-- so admin can call the api, chuwa can not.
+2. Adding `User` and `Role` classes into **entity layer**:
+- Relationship between User and Role: **many-to-many**.
 
+3. Adding `UserRepository` and `RoleRepository` classes into **repository layer**.
+- Define needed methods within these classes using JPA naming convention.
+
+4. Adding below classes into `service layer`:
+- `CusomUserDetailsService` implements `UserDetailsService`;
+- Autowiring **UserRepository**.
+
+5. Adding `LogInDTO` and `SignUpDTO` class to the **DTO / payload layer**.
+
+6. Adding a Configuration class into **config layer**:
+- `SecurityDBConfig` extends `WebSecurityConfigurerAdapter`.
+- Autowiring **customUserDetailsService**;
+- Beans: **PasswordEncoder, AuthenticationManager**.
+
+7. Adding `AuthController` into the **controller layer**.
+- Autowiring **AuthenticationManager, UserRepository, RoleRepository, PasswordEncoder**.
+- Define two more PostMapping functions as well as their corresponding path(url).
