@@ -1,5 +1,5 @@
 ### springboot: redbook
-Implement Spring security - storing user info in database.
+Implementing Spring security - stores user info in database.
 
 1. Disable the user-role configred in `application.properties`;
 
