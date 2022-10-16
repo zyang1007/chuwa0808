@@ -1,25 +1,22 @@
 ### springboot: redbook
-Implementing Spring security - stores user info in database.
+Implementing Spring security - Json Web Token(JWT).
 
-1. Disable the user-role configred in `application.properties`;
+1. Adding JWT dependency;
 
-2. Adding `User` and `Role` classes into **entity layer**:
-- Relationship between User and Role: **many-to-many**.
+2. Create `JwtAuthenticationEntryPoint` within **security layer**.
 
-3. Adding `UserRepository` and `RoleRepository` classes into **repository layer**.
-- Define needed methods within these classes using JPA naming convention.
+3. Add JtwProperties in `application.properties`.
 
-4. Adding below classes into `service layer`:
-- `CusomUserDetailsService` implements `UserDetailsService`;
-- Autowiring **UserRepository**.
+4. Create `JwtTokenProvider` within **security layer**.
 
-5. Adding `LogInDTO` and `SignUpDTO` class to the **DTO / payload layer**.
+5. `JwtAuthenticationFilter` within **security layer**.
 
-6. Adding a Configuration class into **config layer**:
-- `SecurityDBConfig` extends `WebSecurityConfigurerAdapter`.
-- Autowiring **customUserDetailsService**;
-- Beans: **PasswordEncoder, AuthenticationManager**.
+6. Create `JWTAuthResponseDTO`.
 
-7. Adding `AuthController` into the **controller layer**.
-- Autowiring **AuthenticationManager, UserRepository, RoleRepository, PasswordEncoder**.
-- Define two more PostMapping functions as well as their corresponding path(url).
+7. Configure JWT in Spring Security Configuration.
+
+8. Change logIn/signIn API to return token to client.
+
+## New Terms and definitions:
+**Authentication** - to validate the username and password.
+**Authorization** - to varify what resource a user has access to.
