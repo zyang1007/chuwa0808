@@ -19,4 +19,5 @@ Implementing Spring security - Json Web Token(JWT).
 
 ## New Terms and definitions:
 **Authentication** - to validate the username and password.
+
 **Authorization** - to varify what resource a user has access to.
