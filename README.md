@@ -1,19 +1,30 @@
 ### springboot: redbook
 
-**Aspect Oriented Programming(AOP)** is a programming paradigm that aims to increase modularity by allowing separation of cross-cutting concerns.
+Integrating Swagger in Spring Boot App.
 
-#### Usage: 
-- Logging, Tracing, Exception Handling, Security Management.
+1. Add new dependency into **pom.xml**;
+```
+<!-- https://mvnrepository.com/artifact/io.springfox/springfox-
+swagger-ui -->
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>3.0.0</version>
+</dependency>
+```
 
-#### Concepts:
-- **Aspect** - class to define all AOP self methods.
-- **PointCut** - expression to find all main application methods to insert AOP.
-- **Advice** - when to execute AOP methods when the application pointcut is found. Annotations are @Before, @After, @Around, @AfterReturning, @AfterThrowing, @Aspect, @Component, BeforeAll.
+2. Create a configuration class `SwaggerConfig` within the **config layer**.
+- Configure Swagger Docket and UI.
 
-#### Implementing Spring AOP:
-1. Add AOP dependency into the **pom.xml**;
-2. Create a new package **AOP** and add classes/aspects `WebLog`, `WebLogAspect`, and `LoggingAspect`.
-3. Develop Pointcuts and Advices within those classes/Aspects.
+3. Modify the configure() method of `SecurityDBJWTConfig` class.
+
+4. Customizing Swagger REST Doc with Annotations:
+- controller classes;
+- DTO/payload classes. 
+
+5. Check the built result:
+- http://localhost:8080/swagger-ui/
+
 
 #### Extra:
-- disable acutator dependency and add property in **application.propertites** to fix springfox issue.
+- change Spring Boot version to 2.4.2 since has some bugs on Spring Boot 2.7.0.
