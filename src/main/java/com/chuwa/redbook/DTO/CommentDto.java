@@ -1,19 +1,29 @@
 package com.chuwa.redbook.DTO;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.Objects;
 
+@Api(value = "Comment model info")
 public class CommentDto {
+
+    @ApiModelProperty(value = "Comment id")
     private long id;
 
+    @ApiModelProperty(value = "Comment name")
     @NotEmpty(message = "Name should not be null or empty!")
     private String name;
 
+    @ApiModelProperty(value = "Comment email")
     @NotEmpty(message = "Email should not be null or empty!")
     @Email
     private String email;
 
+    @ApiModelProperty(value = "Comment body")
     @NotEmpty
     @Size(min = 5, message = "Comment body must be at least 5 characters!")
     private String body;
@@ -72,5 +82,24 @@ public class CommentDto {
                 ", email='" + email + '\'' +
                 ", body='" + body + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if ( !(obj instanceof CommentDto)){
+            return false;
+        }
+        CommentDto that = (CommentDto) obj;
+
+        return getId() == that.getId() && getName().equals(that.getName())
+                && getEmail().equals(that.getEmail()) && getBody().equals(that.getBody());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getEmail(), getBody());
     }
 }

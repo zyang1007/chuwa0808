@@ -8,6 +8,8 @@ import com.chuwa.redbook.dao.security.UserRepository;
 import com.chuwa.redbook.entity.sercurity.Role;
 import com.chuwa.redbook.entity.sercurity.User;
 import com.chuwa.redbook.security.JwtTokenProvider;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collections;
 
 
+@Api(value = "Auth controller with JWT exposes signIn and signUp REST APIs")
 @RestController
 @RequestMapping("/api/v1/auth/jwt")
 public class AuthJWTController {
@@ -44,6 +47,7 @@ public class AuthJWTController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthJWTController.class);
 
+    @ApiOperation(value = "JWT REST API to SignIn or LogIn user to RedBook app")
     @PostMapping("/signIn")
     public ResponseEntity<JWTAuthResponseDTO> authenticateUser(@RequestBody LogInDTO logInDTO) {
         logger.info(logInDTO.getAccountOrEmail() + " is trying to sign in ...");
@@ -64,6 +68,7 @@ public class AuthJWTController {
         return ResponseEntity.ok(jwtAuthResponseDTO);
     }
 
+    @ApiOperation(value = "JWT REST API to Register or Signup user to RedBook app")
     @PostMapping("/signUp")
     public ResponseEntity<?> registerUser(@RequestBody SignUpDTO signUpDTO) {
         logger.info("New User is trying to sign up...");
