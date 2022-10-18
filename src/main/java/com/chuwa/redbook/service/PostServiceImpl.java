@@ -26,8 +26,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public PostDto createPost(PostDto postDto) {
-        // Post post = mapToEntity(postDto);
-        Post post = modelMapper.map(postDto, Post.class);
+        Post post = modelMapper.map(postDto, Post.class); // convert DTO to entity
 
         Post savedPost = postRepository.save(post); // save the new post to database
 
@@ -48,8 +47,6 @@ public class PostServiceImpl implements PostService {
 
         // create pageable instance
         PageRequest pageRequest = PageRequest.of(pageNo, pageSize, sort);
-        // PageRequest pageRequest = PageRequest.of(pageNo, pageSize, Sort.by(sortBy));
-        // PageRequest pageRequest = PageRequest.of(pageNo, pageSize, Sort.by(sortBy).descending());
         Page<Post> pagePosts = postRepository.findAll(pageRequest);
 
         // get content for page object
@@ -94,27 +91,4 @@ public class PostServiceImpl implements PostService {
         Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
         postRepository.delete(post);
     }
-
-    /*
-
-    private PostDto mapToDto(Post post) {
-        PostDto postDto = new PostDto();
-        postDto.setId(post.getId());
-        postDto.setTitle(post.getTitle());
-        postDto.setDescription(post.getDescription());
-        postDto.setContent(post.getContent());
-
-        return postDto;
-    }
-
-    private Post mapToEntity(PostDto postDto) {
-        Post post = new Post();
-        post.setTitle(postDto.getTitle());
-        post.setDescription(postDto.getDescription());
-        post.setContent(postDto.getContent());
-
-        return post;
-    }
-
-     */
 }
