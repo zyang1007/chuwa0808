@@ -1,6 +1,11 @@
 ### springboot: redbook
 
-#### Unit Testing:
+On this branch:
+- developed unit test `PostServiceImplTest` class using **JUNIT** and **Mockito**;
+- **TODOs:** develop more unit tests in term of the different layers/classes.
+
+
+#### Unit Testing: tesing without DB
 - involves the tesing of each unit or an individual component of the software application;
 - the purpose is to validate that each unit of the software code performs as expected;
 - a unit can be an individual method, function, procedure, module, or object;
@@ -38,5 +43,3 @@
     </plugins>
 </build>
 ```
-
-
